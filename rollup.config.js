@@ -79,7 +79,7 @@ export default {
       sass: require("sass"),
     }),
     alias({
-      entries: [{ find: "@", replacement: "src" }],
+      entries: [{ find: "@", replacement: "src/" }],
     }),
   ],
   watch: {

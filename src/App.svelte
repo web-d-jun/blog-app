@@ -1,12 +1,21 @@
 <script>
-  let name = "world";
+  import Header from "@/components/AppHeader.svelte";
+  import Body from "@/components/AppBody.svelte";
 </script>
 
-<h1>Hello {name}!</h1>
-<div class="test" />
+<div class="container">
+  <Header />
+  <Body />
+</div>
 
 <style lang="scss">
-  .test {
-    color: red;
+  :root {
+    font-size: 62.5%;
+  }
+  :global(body) {
+    padding: 0;
+  }
+  :global(*) {
+    box-sizing: border-box;
   }
 </style>
