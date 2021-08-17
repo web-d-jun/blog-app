@@ -27,19 +27,22 @@
       <img src={imageLogo} alt="logo" class="logo" />&<img src={imageSvelteLogo} alt="logo" class="logo" />
       <div class="logo-name">BAEHA & Svelte</div>
     </div>
-
-    <ul class="ul">
-      <li on:click={() => handleNavigation("Tutorial")}>Tutorial</li>
-      <li on:click={() => handleNavigation("Doc")}>Doc</li>
-      <li on:click={() => handleNavigation("Examples")}>Examples</li>
-      <li on:click={() => handleNavigation("REPL")}>REPL</li>
-      <li on:click={() => handleNavigation("FAQ")}>FAQ</li>
-      <li on:click={() => handleNavigation("SvelteKit")}>SvelteKit</li>
-    </ul>
+    <div class="nav__wrap">
+      <button type="button" class="write-button">글쓰기</button>
+      <ul class="ul">
+        <li on:click={() => handleNavigation("Tutorial")}>Tutorial</li>
+        <li on:click={() => handleNavigation("Doc")}>Doc</li>
+        <li on:click={() => handleNavigation("Examples")}>Examples</li>
+        <li on:click={() => handleNavigation("REPL")}>REPL</li>
+        <li on:click={() => handleNavigation("FAQ")}>FAQ</li>
+        <li on:click={() => handleNavigation("SvelteKit")}>SvelteKit</li>
+      </ul>
+    </div>
   </nav>
 </header>
 
 <style lang="scss">
+  // EF6908-C170B4-CFFFFF-E9F5EB-CEE8F0
   header {
     width: 100%;
     height: 60px;
@@ -65,6 +68,24 @@
           padding-left: 4px;
         }
       }
+
+      & .nav__wrap {
+        display: flex;
+        align-items: center;
+      }
+      .write-button {
+        width: 120px;
+        border-radius: 1.4rem;
+        margin: 0;
+        padding: 0;
+        height: 40px;
+        background-color: #ef6908;
+        color: #fff;
+        font-size: 1.5rem;
+        border: 0;
+        outline: 0;
+      }
+
       .ul {
         list-style: none;
         display: flex;
@@ -73,6 +94,7 @@
           padding: 0 0.8rem;
           &:hover {
             cursor: pointer;
+            color: #ef6908;
           }
         }
       }
