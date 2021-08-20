@@ -603,7 +603,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			main = element("main");
-    			main.textContent = "Body";
+    			main.textContent = "무엇이 들어갈까...";
     			add_location(main, file$1, 3, 0, 23);
     		},
     		l: function claim(nodes) {
